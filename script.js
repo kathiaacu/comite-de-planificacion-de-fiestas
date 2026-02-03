@@ -54,29 +54,89 @@
 })();
 */
 const messages = [
+
+    "¿Falso? ¿O verdadero? (Falso)",
+
     "Are you sure?",
+
+    "¿Quieres que llame a seguridad?",
+
     "Really sure??",
-    "Are you positive?",
-    "Pookie please...",
-    "Just think about it!",
-    "If you say no, I will be really sad...",
-    "I will be very sad...",
-    "I will be very very very sad...",
+
     "Ok fine, I will stop asking...",
-    "Just kidding, say yes please! ❤️"
+
+    "Just think about it!",
+
+    "¡I DECLARE... VALENTINE'S!",
+
+    "Eres el Scranton Strangler, me asfixias.",
+
+    "That's what SHE said... y ella dijo SÍ.",
+
+    "¡Di que sí o llamo a Dwight! 💼"
+
 ];
+
+
 
 let messageIndex = 0;
 
+
+
+// Función para cuando hace clic en "NO"
+
 function handleNoClick() {
+
     const noButton = document.querySelector('.no-button');
+
     const yesButton = document.querySelector('.yes-button');
+
+    
+
+    // Cambia el texto del botón NO
+
     noButton.textContent = messages[messageIndex];
+
     messageIndex = (messageIndex + 1) % messages.length;
+
+    
+
+    // Hace que el botón SÍ crezca para que sea imposible no darle
+
     const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+
     yesButton.style.fontSize = `${currentSize * 1.5}px`;
+
 }
 
+
+
+// Función para cuando hace clic en "SÍ"
+
 function handleYesClick() {
+
+    // Redirige a la página de confirmación
+
     window.location.href = "yes_page.html";
+
 }
+
+
+
+// --- NO TOCAR ESTO ---
+
+// Esto es para que el código sepa qué botones buscar en tu página
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const btnNo = document.querySelector('.no-button');
+
+    const btnYes = document.querySelector('.yes-button');
+
+    
+
+    if(btnNo) btnNo.onclick = handleNoClick;
+
+    if(btnYes) btnYes.onclick = handleYesClick;
+
+});
