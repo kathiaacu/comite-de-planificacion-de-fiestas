@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitud de Disponibilidad - Dunder Mifflin</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background-color: #f0f0f0; font-family: 'Arial', sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; text-align: center; }
+        .main-image { width: 300px; border-radius: 10px; margin-bottom: 20px; }
+        h1 { color: #333; font-size: 24px; }
+        p { color: #666; max-width: 80%; margin-bottom: 30px; }
+        .buttons { display: flex; gap: 20px; align-items: center; justify-content: center; }
+        .yes-button { background-color: #28a745; color: white; border: none; padding: 15px 30px; border-radius: 5px; cursor: pointer; font-size: 18px; }
+        .no-button { background-color: #dc3545; color: white; border: none; padding: 15px 30px; border-radius: 5px; cursor: pointer; font-size: 18px; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="header_text">SOLICITUD DE DISPONIBILIDAD</h1>
-        <div class="gif_container">
-            <img class="main-image" src="https://media.giphy.com/media/dXFKuXndZJCyTfWAvv/giphy.gif" alt="Dwight">
-        </div>
-        <div class="text-container">
-            <p>Se ha detectado una irregularidad en los registros del <b>Sábado 14</b>. Como parte de nuestra reunión de finanzas, se requiere saber: <b>¿Qué tan disponible estarás y a qué hora podrías atender esta sesión de suma importancia?</b></p>
-        </div>
-        <div class="buttons">
-            <button class="yes-button" onclick="handleYesClick()">Disponible (Confirmar horario)</button>
-            <button class="no-button" onclick="handleNoClick()">No disponible / Soy Toby</button>
-        </div>
+    <h1>SOLICITUD DE DISPONIBILIDAD</h1>
+    <img class="main-image" src="https://media.giphy.com/media/dXFKuXndZJCyTfWAvv/giphy.gif" alt="Dwight">
+    <p>Se ha detectado una irregularidad en los registros del <b>Sábado 14</b>. Como parte de nuestra reunión de finanzas, se requiere saber: <b>¿Qué tan disponible estarás y a qué hora podrías atender esta sesión de suma importancia?</b></p>
+    <div class="buttons">
+        <button class="yes-button" onclick="handleYesClick()">Disponible (Confirmar horario)</button>
+        <button class="no-button" onclick="handleNoClick()">No disponible / Soy Toby</button>
     </div>
     <script src="script.js"></script>
 </body>
